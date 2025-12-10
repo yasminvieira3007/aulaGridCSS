@@ -10,8 +10,21 @@ main{
     background-color: #d9d9d9;
     display: grid;
     gap: 24px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 100px 1fr 1fr;
 }
 
 section{
     background-color: #fff;
+    border-radius: 20px;
+}
+
+.section-metricas{
+    background-color: transparent;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.section-metricas, .section-vendas{ 
+    grid-column: span 2;
 }
