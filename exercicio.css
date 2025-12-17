@@ -4,14 +4,36 @@
     padding: 0;
     outline: 0;
     box-sizing: border-box;
+    font-family: "Montserrat", sans-serif;
+}
+
+header {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    justify-content: space-between;
+    padding: 80px 70px 110px;
+    background-color: #fff;
+}
+
+header h1 {
+    font-weight: 300;
+    color: #23306A;
+    font-size: 26px;
+    width: 600px;
+}
+
+header h1 > span {
+    font-weight: 600;
 }
 
 main{
+    margin-top: -60px;
     background-color: #d9d9d9;
     display: grid;
     gap: 24px;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 100px 1fr 1fr;
+    grid-template-rows: 100px 400px 1fr;
     padding: 0 70px;
 }
 
@@ -20,32 +42,76 @@ section{
     border-radius: 20px;
 }
 
+section img{
+    width: 100%;
+}
+
+section h1 {
+    font-size: 22px;
+    font-weight: 400;
+}
+
 .section-metricas{
     background-color: transparent;
     display: grid;
     gap: 20px;
     grid-template-columns: repeat(4, 1fr);
+    color: #fff;
 }
 
 .section-metricas > div{
+    z-index: 2;
     border-radius: 20px;
     padding: 12px 30px;
 }
 
 .div-metrica1{
-    background: radial-gradient(#ffffff2a, #5383EC);
+    background: radial-gradient(circle at top center, #9bb7f4, #5383EC);
 }
 
 .div-metrica2{
-    background: radial-gradient(#ffffff2a, #9C55EC);
+    background: radial-gradient(circle at top center, #d0aef6, #9C55EC);
 }
 
 .div-metrica3{
-    background: radial-gradient(#ffffff2a, #111E5F);
+    background: radial-gradient(circle at top center, #8f95b4, #111E5F);
 }
 
 .div-metrica4{
-    background: radial-gradient(#ffffff2a, #F1911E);
+    background: radial-gradient(circle at top center, #f8c68b, #F1911E);
+}
+
+.metrica-span1 {
+    font-size: 36px;
+    font-weight: 600;
+    display: block;
+}
+
+.metrica-span2 {
+    color: #82FFB7;
+}
+
+.metrica-span2::before {
+    content: url(./icone\ azul.png);
+    margin-right: 5px;
+}
+
+.adocao, .retencao, .engajamento, .sucesso, .section-vendas h1 {
+    display: flex;
+    justify-content: space-between;
+}
+
+.adocao::after {
+    content: url(./icone\ cx\ az.png);
+}
+.retencao::after {
+    content: url(./icone\ cx\ az\ esc.png);
+}
+.sucesso::after {
+    content: url(./icone\ cx\ lar.png);
+} 
+.engajamento::after {
+    content: url(./iconelilas.png);
 }
 
 .section-metricas, .section-vendas{ 
@@ -60,10 +126,30 @@ section{
     text-align: center;
 }
 
+.section-satisfação img {
+    width: 60%;
+    margin-top: 20px;
+}
+
 .section-satisfação h1 {
     text-align: left;
 }
 
+.section-engajamento h1, .section-satisfação h1, .section-vendas h1 {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
 .section-vendas{
     padding: 35px 50px;
+}
+
+.section-satisfação h1::before{
+    content: url(./cora.png);
+}
+.section-engajamento h1::before{
+    content: url(./icone.img.2.png);
+}
+.section-vendas h1::after{ 
+    content: url(./camera\ ima\ 3.png);
 }
